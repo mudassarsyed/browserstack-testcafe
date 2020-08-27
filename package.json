@@ -1,0 +1,13 @@
+{
+  "name": "sample-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "BrowserStack Demo",
+  "scripts": {
+    "test": "trigger_tests.sh"
+  },
+  "devDependencies": {
+    "testcafe": "*",
+    "testcafe-browser-provider-browserstack": "^1.13.0"
+  }
+}
