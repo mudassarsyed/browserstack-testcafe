@@ -16,10 +16,16 @@
 	- Via command line
 		- sh trigger_tests_option1.sh <PROJECT_NAME> <BUILD_NAME>
 		- sh trigger_tests_option2.sh <PROJECT_NAME> <BUILD_NAME>
+		- sh trigger_tests_option3.sh <PROJECT_NAME> <BUILD_NAME>
 
-trigger_tests_option1.sh is useful when you want to run each fixture in your tests folder on multiple browsers. Each fixture will run in different BrowserStack test sessions.
+In each of the below cases, every fixture runs in separate BrowserStack test sessions.
 
-trigger_tests_option2.sh is useful when you want to run multiple fixtures in your tests folder together on multiple browsers with a single command. In this case too, each fixture will run in different BrowserStack test sessions based on the concurrent run param -c <total_fixtures_count>.
+- trigger_tests_option1.sh: Every fixture runs on all 'N' browsers in parallel using a single TestCafe command. Then the next fixture is targeted.
+
+- trigger_tests_option2.sh: All 'N' fixtures run on all 'N' browsers in parallel using a single TestCafe command. While using this option as-is, one needs to ensure that their BrowserStack plan has adequate parallels to support (#fixtures * #browsers)
+
+- trigger_tests_option3.sh: All 'N' fixtures run on a single browser in parallel using a single TestCafe command. Then the next browser is targeted.
+
 
 * Note: Local is on by default for all the tests, hence we can run local tests without having to start the local connection
 
