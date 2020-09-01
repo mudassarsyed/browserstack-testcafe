@@ -14,9 +14,9 @@
 
 * Methods to run the tests:
 	- Via command line
-		- sh trigger_tests_option1.sh <PROJECT_NAME> <BUILD_NAME>
-		- sh trigger_tests_option2.sh <PROJECT_NAME> <BUILD_NAME>
-		- sh trigger_tests_option3.sh <PROJECT_NAME> <BUILD_NAME>
+		- sh trigger_tests_option1.sh <PROJECT_NAME> <BUILD_NAME> <BROWSERSTACK_USE_AUTOMATE=0/1>
+		- sh trigger_tests_option2.sh <PROJECT_NAME> <BUILD_NAME> <BROWSERSTACK_USE_AUTOMATE=0/1>
+		- sh trigger_tests_option3.sh <PROJECT_NAME> <BUILD_NAME> <BROWSERSTACK_USE_AUTOMATE=0/1>
 
 In each of the below cases, every fixture runs in separate BrowserStack test sessions.
 
